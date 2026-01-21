@@ -1,12 +1,23 @@
+import base64
+
 def ascii_binary(message):
     final = []
     for i in message.split(' '):
         word = []
         for j in i:
-            word.append(bin(int(ord(j)))[2:])
+            word.append(number_to_binary(int(ord(j))))
         final.append(word)
     return final
 
-print(f"Hola is {ascii_binary("Hola como estas")} ")
+
+def number_to_binary(number):
+    if number == 0:
+        return '0'
+    if number == 1:
+        return '1'
+    return number_to_binary(int(number/2)) + str(number % 2)
+
+
+
 
 
