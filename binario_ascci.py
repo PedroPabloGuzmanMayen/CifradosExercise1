@@ -2,9 +2,7 @@ def ascii_binary(message):
     final = ""
 
     for i in message:
-        binary = number_to_binary(int(ord(i)))
-        if len(binary) < 8:
-            binary = binary.zfill(8)
+        binary = cast_binary(8, number_to_binary(int(ord(i))))
         final += binary
 
     return final
@@ -18,6 +16,9 @@ def number_to_binary(number):
     return number_to_binary(int(number/2)) + str(number % 2)
 
 
-print(f'Hola es encoded like: {ascii_binary('Hola')} ')
+def cast_binary(base, bin_number):
+    if len(bin_number) < base:
+        return bin_number.zfill(base)
+    return bin_number
 
-
+print(f'Hola como estas es: {ascii_binary('Hola como estas')}')
