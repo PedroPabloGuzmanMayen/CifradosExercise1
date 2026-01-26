@@ -12,4 +12,4 @@ def base64_bin(message):
 
     return final
 
-print(f'Hola como estas in base 64 binary is: {base64_bin('Hola como estas')} ')
+print(f'Hola como estas in base 64 binary is: {base64_bin('Como')} ')
