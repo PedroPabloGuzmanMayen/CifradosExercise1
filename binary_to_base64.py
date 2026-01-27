@@ -29,6 +29,3 @@ def binary_to_base64(binary):
     
     return final + padding
 
-
-
-

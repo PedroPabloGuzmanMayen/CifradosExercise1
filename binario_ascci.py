@@ -20,5 +20,3 @@ def cast_binary(base, bin_number):
     if len(bin_number) < base:
         return bin_number.zfill(base)
     return bin_number
-
-print(f'Hola como estas es: {ascii_binary('Hola como estas')}')

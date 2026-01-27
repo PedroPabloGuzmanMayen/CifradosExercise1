@@ -11,6 +11,5 @@ def binary_to_ascii(binary):
 
     return final
 
-print(f'binary to ascii: {binary_to_ascii('01000101011110000110000101101101011100000110110001100101')}')
 
 
