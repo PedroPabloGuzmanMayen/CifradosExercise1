@@ -1,4 +1,6 @@
 from base64_binary import BASE64_ALPHABET
+
+
 def binary_string_to_decimal(binary):
     decimal = 0
     for i in range(len(binary)):
@@ -28,10 +30,5 @@ def binary_to_base64(binary):
     return final + padding
 
 
-
-
-print(f'divided = {divide_binary_string('010011010110000101101110', 6)}')
-
-print(f'bonary to base64 {binary_to_base64('01001101')}')
 
 
