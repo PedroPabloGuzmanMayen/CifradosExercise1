@@ -1,5 +1,7 @@
+from utils import number_to_binary, cast_binary
+
 def ascii_binary(message):
-    final = ""
+    final = ''
 
     for i in message:
         binary = cast_binary(8, number_to_binary(int(ord(i))))
@@ -7,16 +9,3 @@ def ascii_binary(message):
 
     return final
 
-
-def number_to_binary(number):
-    if number == 0:
-        return '0'
-    if number == 1:
-        return '1'
-    return number_to_binary(int(number/2)) + str(number % 2)
-
-
-def cast_binary(base, bin_number):
-    if len(bin_number) < base:
-        return bin_number.zfill(base)
-    return bin_number

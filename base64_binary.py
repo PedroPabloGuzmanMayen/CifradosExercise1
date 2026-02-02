@@ -1,6 +1,4 @@
-from binario_ascci import number_to_binary, cast_binary
-
-BASE64_ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+from utils import BASE64_ALPHABET, number_to_binary, cast_binary
 
 def base64_bin(message):
     final = ''
@@ -10,4 +8,5 @@ def base64_bin(message):
         final += cast_binary(6, number_to_binary(BASE64_ALPHABET.index(j)))
 
     return final
+
 

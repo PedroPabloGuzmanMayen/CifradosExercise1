@@ -1,4 +1,4 @@
-from binary_to_base64 import divide_binary_string, binary_string_to_decimal
+from utils import divide_binary_string, binary_string_to_decimal
 
 def binary_to_ascii(binary):
     if len(binary) % 8 != 0:
