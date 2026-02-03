@@ -29,6 +29,3 @@ def decipher_caesar(message, shift):
 
     return final
 
-
-print(cipher_caesar('If he had anything confidential to say he wrote it in cipher that is by so changing the order of the letters of the alphabet that not a word could be made out', 7))
-print(decipher_caesar('Om ñl ñhk htfañotn jvtmokltaohr av zhf ñl dyval oa ot jowñly añha oz if zv jñhtnotn añl vykly vm añl rlaalyz vm añl hrwñhila añha tva h dvyk jvbrk il shkl vba', 7))

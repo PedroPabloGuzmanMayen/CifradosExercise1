@@ -12,7 +12,7 @@ def frequency_analysis(message):
     ax.set_title('Frequency by letter')
     ax.set_xlabel('Letter')
     ax.set_ylabel('Frequency')
-    plt.savefig("frequency.png")
+    plt.savefig("./images/frequency.png")
     plt.close()
 
     print(f"{'Letra':<8}{'Frecuencia':<10}")
