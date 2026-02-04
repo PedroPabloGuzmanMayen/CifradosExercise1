@@ -4,7 +4,17 @@ UPPER_ALPHABET = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ'
 print(len(UPPER_ALPHABET))
 
 def cipher_vigenere(message, key):
-    
+    """
+    Cifra un mensaje utiliando el cifrado vigenere.
+
+    Esta función recorre un mensaje y va sumando su valor en el alfabeto con el valor de la llave y en base a eso cifra el mensaje
+    Args:
+        message (str): El mensaje a cifrar.
+        key (str): La llave para cifrar el mensaje
+
+    Returns:
+        mensaje final: el mensaje cifrado con vigenere 
+    """
     final = ''
     key_index = 0
     for i in range(len(message)) :
@@ -22,7 +32,17 @@ def cipher_vigenere(message, key):
     return final
 
 def decipher_vigenere(message, key):
-    
+    """
+    Descifra un mensaje utiliando el cifrado vigenere.
+
+    Esta función recorre un mensaje y va restando su valor en el alfabeto con el valor de la llave y en base a eso descifra el mensaje
+    Args:
+        message (str): El mensaje a cifrar.
+        key (str): La llave para descifrar el mensaje
+
+    Returns:
+        mensaje final: el mensaje descifrado con vigenere 
+    """
     final = ''
     key_index = 0
     for i in range(len(message)) :
@@ -40,4 +60,36 @@ def decipher_vigenere(message, key):
     return final
 
 
-print(f'Hola with lemon {decipher_vigenere('Jmvwduw id sn Kmozq', 'Cielo' )}')
+if __name__ == '__main__':
+    while True:
+        print('\n=== Cifrado Vigenère (alfabeto español) ===')
+        print('1) Cifrar mensaje')
+        print('2) Descifrar mensaje')
+        print('3) Salir')
+
+        opcion = input('Elige una opción: ')
+
+        if opcion == '1':
+            mensaje = input('\nIngresa el mensaje a cifrar: ')
+            llave = input('Ingresa la llave: ')
+
+            cifrado = cipher_vigenere(mensaje, llave)
+
+            print('\nMensaje cifrado:')
+            print(cifrado)
+
+        elif opcion == '2':
+            mensaje = input('\nIngresa el mensaje a descifrar: ')
+            llave = input('Ingresa la llave: ')
+
+            descifrado = decipher_vigenere(mensaje, llave)
+
+            print('\nMensaje descifrado:')
+            print(descifrado)
+
+        elif opcion == '3':
+            print('\nSaliendo del programa...')
+            break
+
+        else:
+            print('\n Opción inválida, intenta de nuevo.')
